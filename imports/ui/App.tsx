@@ -1,11 +1,16 @@
-import React from 'react';
-import { Hello } from './Hello';
-import { Info } from './Info';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
+import Main from "/imports/ui/pages/Main";
+import Tasks from "/imports/ui/pages/Tasks";
 
-export const App = () => (
-  <div>
-    <h1>Welcome to Meteor!</h1>
-    <Hello />
-    <Info />
-  </div>
+const App = () => (
+  <>
+    <CssBaseline />
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/tasks" element={<Tasks />} />
+    </Routes>
+  </>
 );
+export default App;
