@@ -1,4 +1,4 @@
-import { Mongo } from 'meteor/mongo';
+import { Mongo } from "meteor/mongo";
 
 export interface ITask {
   _id: string;
@@ -7,5 +7,4 @@ export interface ITask {
   isChecked?: boolean;
 }
 
-
-export const TasksCollection = new Mongo.Collection<ITask>('tasks');
+export const TasksCollection = new Mongo.Collection<ITask>("tasks");

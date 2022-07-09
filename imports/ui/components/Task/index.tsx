@@ -1,10 +1,7 @@
 import React from "react";
 import { ITask } from "/imports/api/TasksCollection";
 
-export type TaskPropOnCheckboxClick = (
-  id: string,
-  isChecked?: boolean
-) => void;
+export type TaskPropOnCheckboxClick = (id: string, isChecked?: boolean) => void;
 export type TaskPropOnDeleteClick = (id: string) => void;
 
 export interface TaskProps {
@@ -27,9 +24,9 @@ const Task = ({ task, onCheckboxClick, onDeleteClick }: TaskProps) => {
       <input
         type="checkbox"
         checked={!!task.isChecked}
-        onClick={handleChangeCheckbox}
+        onChange={handleChangeCheckbox}
       />
-      {task.text}
+      <span>{task.text}</span>
       <button onClick={handleDeleteClick}>&times;</button>
     </li>
   );

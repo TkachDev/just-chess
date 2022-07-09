@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.scss"
+import "./styles.scss";
 
 interface ILink {
   name: string;
@@ -14,11 +14,17 @@ const links: ILink[] = [
 
 const Navigation = () => {
   return (
-    <nav className="navigation-bar">
-      {links.map(({ name, value }) => (
-        <Link key={value} to={value}>{name}</Link>
-      ))}
-    </nav>
+    <div className="app-bar">
+      <div className="app-header">
+        <nav className="navigation-bar">
+          {links.map(({ name, value }) => (
+            <Link key={value} to={value}>
+              {name}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </div>
   );
 };
 

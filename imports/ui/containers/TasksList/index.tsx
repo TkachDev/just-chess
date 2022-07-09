@@ -25,7 +25,7 @@ const TasksList = () => {
   };
 
   return (
-    <ul>
+    <ul className="tasks">
       {tasks.map((task: ITask) => (
         <Task
           key={task._id}
