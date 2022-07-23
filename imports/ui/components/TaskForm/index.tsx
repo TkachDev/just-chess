@@ -1,5 +1,6 @@
 import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { TasksCollection } from "/imports/api/TasksCollection";
+import "./styles.scss";
 
 const TaskForm = () => {
   const [text, setText] = useState("");

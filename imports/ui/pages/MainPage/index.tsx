@@ -1,19 +1,22 @@
 import { Hello } from "/imports/ui/components/Hello";
 import React from "react";
 import Navigation from "/imports/ui/containers/Navigation";
+import Page from "/imports/ui/components/pageLayout/Page";
+import Header from "/imports/ui/components/pageLayout/Header";
+import Main from "/imports/ui/components/pageLayout/Main";
 
 const MainPage = () => {
   return (
-    <div className="app">
-      <header>
+    <Page>
+      <Header>
         <Navigation />
-      </header>
+      </Header>
 
-      <div className="main">
+      <Main>
         <h1>Welcome to Meteor!</h1>
         <Hello />
-      </div>
-    </div>
+      </Main>
+    </Page>
   );
 };
 

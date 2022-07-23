@@ -5,6 +5,7 @@ import Task, {
 import React from "react";
 import { useTracker } from "meteor/react-meteor-data";
 import { ITask, TasksCollection } from "/imports/api/TasksCollection";
+import "./styles.scss";
 
 const TasksList = () => {
   const tasks = useTracker(

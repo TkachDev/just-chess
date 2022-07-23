@@ -2,19 +2,22 @@ import TasksList from "/imports/ui/containers/TasksList";
 import React from "react";
 import Navigation from "/imports/ui/containers/Navigation";
 import TaskForm from "/imports/ui/components/TaskForm";
+import Page from "/imports/ui/components/pageLayout/Page";
+import Header from "/imports/ui/components/pageLayout/Header";
+import Main from "/imports/ui/components/pageLayout/Main";
 
 const TasksPage = () => {
   return (
-    <div className="app">
-      <header>
+    <Page>
+      <Header>
         <Navigation />
-      </header>
+      </Header>
 
-      <div className="main">
+      <Main>
         <TaskForm />
         <TasksList />
-      </div>
-    </div>
+      </Main>
+    </Page>
   );
 };
 
